@@ -35,9 +35,33 @@ GitHub Sync orqali quyidagilar sinxronlanadi:
 Python Interpreter: /usr/local/bin/python (workspace)
 SPARK_HOME: /opt/spark (workspace)
 Icon Theme: material-icon-theme (workspace)
+Jupyter Notebooks: jupyter-notebook editor (workspace)
+AI Assistants: O'CHIRILGAN ❌ (workspace)
 Color Theme: [sizning synced settingingiz] ✅
 Keyboard Shortcuts: [sizning synced settingingiz] ✅
 Editor Font: [sizning synced settingingiz] ✅
 ```
 
 Demak, GitHub Sync ishlay veradi, faqat Spark-specific sozlamalar workspace dan olinadi! 🎉
+
+## 🚫 AI Assistants (Interview Mode)
+
+Interview environment bo'lgani uchun barcha AI yordamchilar **O'CHIRILGAN**:
+
+❌ GitHub Copilot
+❌ ChatGPT / OpenAI
+❌ Google Gemini / Bard
+❌ Amazon CodeWhisperer
+❌ Tabnine
+❌ Codeium
+
+Bu interview'da o'z bilimingizni ko'rsatishingiz uchun!
+
+## 📓 Jupyter Notebooks
+
+Jupyter notebook fayllari (*.ipynb) avtomatik ravishda to'g'ri editor bilan ochiladi.
+
+Agar muammo bo'lsa:
+1. VS Code ni reload qiling (Cmd/Ctrl+Shift+P → "Reload Window")
+2. Jupyter extension o'rnatilganligini tekshiring
+3. `.ipynb` faylni o'ng tugma → "Open With" → "Jupyter Notebook"

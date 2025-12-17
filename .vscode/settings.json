@@ -16,9 +16,20 @@
     "PYSPARK_PYTHON": "/usr/local/bin/python"
   },
 
-  // Jupyter Configuration
+  // Jupyter & Notebook Configuration
   "jupyter.askForKernelRestart": false,
   "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "notebook.defaultFormatter": "ms-python.python",
+  "notebook.formatOnSave.enabled": true,
+  "notebook.output.textLineLimit": 500,
+
+  // Notebook File Associations - Fix opening issue
+  "files.associations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
 
   // Icon theme for this workspace only
   "workbench.iconTheme": "material-icon-theme",
@@ -44,8 +55,42 @@
     "**/*.pyc": true
   },
 
-  // Disable Copilot for interview environment
+  // ========================================
+  // DISABLE ALL AI ASSISTANTS FOR INTERVIEWS
+  // ========================================
+
+  // GitHub Copilot
   "github.copilot.enable": false,
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.inlineSuggest.enable": false,
+  "github.copilot.chat.enabled": false,
+
+  // ChatGPT / OpenAI
+  "chatgpt.enable": false,
+  "chatgpt.gpt3.enable": false,
+  "openai.enable": false,
+
+  // Google Gemini / Bard
+  "gemini.enable": false,
+  "bard.enable": false,
+
+  // Amazon CodeWhisperer
+  "aws.codeWhisperer.enabled": false,
+  "codewhisperer.enabled": false,
+
+  // Tabnine
+  "tabnine.disable": true,
+  "tabnine.experimentalAutoImports": false,
+
+  // Codeium
+  "codeium.enableCodeLens": false,
+  "codeium.enableConfig": {
+    "*": false
+  },
+
+  // IntelliCode
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.suggestSelection": "first",
 
   // Python Editor Settings
   "editor.tabSize": 4,
