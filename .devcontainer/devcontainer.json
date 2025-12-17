@@ -7,6 +7,7 @@
     "terminal.integrated.defaultProfile.linux": "bash",
     "python.defaultInterpreterPath": "/usr/local/bin/python",
     "jupyter.askForKernelRestart": false,
+    "workbench.iconTheme": "material-icon-theme",
     "github.copilot.enable": false,
     "github.copilot.inlineSuggest.enable": false,
     "github.copilot.chat.enabled": false
