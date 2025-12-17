@@ -1,0 +1,17 @@
+{
+  "name": "Spark Interview Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "jupyter.askForKernelRestart": false
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "ms-vsliveshare.vsliveshare"
+  ],
+  "postCreateCommand": "python -m ipykernel install --user --name spark-env && spark-submit --version"
+}
