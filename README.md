@@ -25,7 +25,11 @@ Bu repository Apache Spark bilan intervyu savollarini echish uchun tayyor develo
 2. `Code` tugmasini bosing
 3. `Codespaces` tabini tanlang
 4. `Create codespace on main` tugmasini bosing
-5. Bir necha daqiqa kuting (birinchi marta 5-7 daqiqa olishi mumkin)
+5. **Sabr qiling**: Birinchi build 5-10 daqiqa oladi
+   - Apache Spark (~400MB) yuklab olinadi - progress bar ko'rinadi
+   - Python packages o'rnatiladi
+   - Extensions yuklanadi
+   - Keyingi safar cache ishlatiladi va tezroq bo'ladi!
 
 ### VS Code Remote Containers orqali
 
@@ -157,6 +161,15 @@ Container quyidagi environment variablelarni o'rnatadi:
 4. **DataFrame vs RDD**: Zamonaviy Spark loyihalarda DataFrame API tavsiya etiladi
 
 ## 🔍 Muammolarni hal qilish
+
+### Container build qolayapti
+
+Agar build stuck bo'lib qolsa:
+1. **Sabr qiling** - Spark fayl katta (~400MB), yuklanishi 3-5 daqiqa oladi
+2. Progress bar ko'rinishi kerak - agar ko'rinmasa:
+   - Container log larini tekshiring
+   - Build ni cancel qilib, qayta boshlang
+3. Internet connection tekshiring
 
 ### Spark session yaratilmayapti
 ```python
