@@ -23,13 +23,19 @@ ENV SPARK_HOME=/opt/spark
 ENV PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 ENV PYSPARK_PYTHON=python3
 
-RUN wget -q https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
-    && tar -xzf spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
-    && mv spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} ${SPARK_HOME} \
-    && rm spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz
+# Download and install Spark with progress indicator
+RUN echo "Downloading Apache Spark ${SPARK_VERSION} (~400MB)..." && \
+    wget --progress=bar:force:noscroll \
+    https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz && \
+    echo "Extracting Spark..." && \
+    tar -xzf spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz && \
+    mv spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} ${SPARK_HOME} && \
+    rm spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz && \
+    echo "Spark installation completed!"
 
 # Install Python packages
-RUN pip install --no-cache-dir \
+RUN echo "Installing Python packages..." && \
+    pip install --no-cache-dir \
     pyspark==${SPARK_VERSION} \
     pandas \
     numpy \
@@ -38,7 +44,8 @@ RUN pip install --no-cache-dir \
     ipykernel \
     matplotlib \
     debugpy \
-    findspark
+    findspark && \
+    echo "Python packages installed!"
 
 # Create non-root user for development
 RUN useradd -m -s /bin/bash vscode && \
