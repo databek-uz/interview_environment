@@ -1,13 +1,14 @@
 {
-  "name": "Spark Interview Environment",
+  "name": "Spark Interview Environment (Bitnami)",
   "build": {
     "dockerfile": "Dockerfile"
   },
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
-    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "python.defaultInterpreterPath": "/opt/bitnami/python/bin/python",
     "jupyter.askForKernelRestart": false,
     "workbench.iconTheme": "material-icon-theme",
+
     "github.copilot.enable": false,
     "github.copilot.inlineSuggest.enable": false,
     "github.copilot.chat.enabled": false
@@ -18,5 +19,5 @@
     "ms-vsliveshare.vsliveshare",
     "PKief.material-icon-theme"
   ],
-  "postCreateCommand": "python -m ipykernel install --user --name spark-env && spark-submit --version"
+  "postCreateCommand": "python -m ipykernel install --user --name spark-bitnami && spark-submit --version"
 }
