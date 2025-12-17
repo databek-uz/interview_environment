@@ -11,7 +11,8 @@
   "extensions": [
     "ms-python.python",
     "ms-toolsai.jupyter",
-    "ms-vsliveshare.vsliveshare"
+    "ms-vsliveshare.vsliveshare",
+    "PKief.material-icon-theme"
   ],
   "postCreateCommand": "python -m ipykernel install --user --name spark-env && spark-submit --version"
 }
