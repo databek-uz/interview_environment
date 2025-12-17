@@ -52,6 +52,7 @@ derby.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/README.md
 
 # pytest
 .pytest_cache/
