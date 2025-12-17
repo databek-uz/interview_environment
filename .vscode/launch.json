@@ -2,16 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug PySpark (Bitnami)",
+      "name": "Debug PySpark",
       "type": "python",
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
       "justMyCode": false,
       "env": {
-        "SPARK_HOME": "/opt/bitnami/spark",
-        "PYSPARK_PYTHON": "/opt/bitnami/python/bin/python"
+        "SPARK_HOME": "/opt/spark",
+        "PYSPARK_PYTHON": "/usr/local/bin/python",
+        "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk-amd64"
       }
+    },
+    {
+      "name": "Debug Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
